@@ -1,0 +1,130 @@
+.wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-bg-navbar);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 80px;
+}
+
+.buttonWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headerButton {
+    height: max-content;
+    color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    background-color: var(--color-navbar-button);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.headerButton:hover {
+    background-color: var(--color-navbar-button-hover);
+}
+
+.registerButton {
+    background-color: #333;
+}
+
+.registerButton:hover {
+    background-color: #707070;
+}
+
+.languagueItem {}
+
+option {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+
+.languageItemFlag {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.currentLanguage {
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 5px;
+    position: relative;
+}
+
+.currentLanguageIcon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.listLanguages {
+    position: relative;
+    z-index: 1;
+}
+
+.listLanguagesWrapper {
+    display: none;
+    position: absolute;
+    height: 135px;
+    overflow-y: scroll;
+    z-index: 2;
+    margin-top: 5px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 27px -1px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0px 0px 27px -1px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 0px 27px -1px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+}
+
+.listLanguagesWrapper::before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    z-index: 3;
+    background-color: red;
+    transform: translateY(-100%);
+}
+
+.listLanguagesWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+.languageItem {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.languageItemLine {
+    width: 100%;
+    background-color: #ddd;
+    height: 1px;
+    margin: 0 3px;
+    border-radius: 3px;
+}
+
+.listLanguages:hover .listLanguagesWrapper {
+    display: block;
+}
